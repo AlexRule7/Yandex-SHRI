@@ -1,0 +1,168 @@
+/*Common styles*/
+body {
+	font-family: 'PFAgoraSlabProRegular', Georgia; 
+	color: #000; 
+	background: url(../img/bg.jpg) repeat #477981;
+	zoom: 1;
+}
+.contentHolder {
+	width: 660px;
+	height: auto;
+	margin: 50px auto;
+	position: relative;
+}
+a {
+	text-decoration: none;
+	color: #1c98cb;
+}
+a:hover {
+	color: #1c98cb;
+	border-bottom: solid 1px;
+}
+.actionLink:hover {
+	text-decoration: none;
+	border-bottom: dotted 1px;
+}
+
+/*Sheet styles*/
+.paperSheet {
+	background: #fff;
+	height: 400px;
+	width: 660px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+	position: relative;
+	top: 25px;
+	z-index: 300;
+}
+.middleLayer {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	position: absolute;
+	z-index: 200;
+}
+.bottomLayer {
+	-webkit-transform: rotate(-1.5deg);
+	-moz-transform: rotate(-1.5deg);
+	-ms-transform: rotate(-1.5deg);
+	-o-transform: rotate(-1.5deg);
+	position: absolute;
+	z-index: 100;
+}
+
+/*Block styles*/
+.header {
+	width: 100%;
+	height: 110px;
+}
+.leftFloatBlock {
+	width: 160px;
+	height: 100%;
+	float: left;
+}
+.rightFloatBlock {
+	width: 499px;
+	height: auto;
+	float: right;
+}
+.photoHolder {
+	position: relative;
+}
+.photoHolder .photo {
+	position: absolute;
+	top: -20px;
+	right: 15px;
+}
+.navigation {
+	font-size: 15px;
+	list-style: none;
+	text-align: right;
+	display: block;
+	margin: 0;
+	padding: 8px 10px 0 0;
+}
+.navigation a {
+	text-decoration: none;
+}
+.navigation li {
+	padding-bottom: 4px;
+}
+.navigation a.selected {
+	text-decoration: none;
+	color: #000;
+	border: none;
+	position: relative;
+	cursor: text;
+}
+.navigation a.selected:after {
+	content: "";
+	background: url(../img/linkCorner.png) no-repeat;
+	display: block;
+	width: 6px;
+	height: 9px;
+	position: absolute;
+	top: 6px;
+	right: -16px;
+}
+.textContentBlock {
+	padding: 10px 0 5px 0;
+	border-left: dotted 1px #adadad;
+}
+.skypeAccount {
+	display: none;
+}
+.hide {
+	display: none;
+}
+
+/*Text styles*/
+@font-face {
+	font-family: 'PFAgoraSlabProRegularLigher';
+	src: url('../fonts/pfagoraslabpro-light-webfont.eot');
+	src: url('../fonts/pfagoraslabpro-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/pfagoraslabpro-light-webfont.woff') format('woff'),
+		 url('../fonts/pfagoraslabpro-light-webfont.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal; 
+}
+@font-face {
+	font-family: 'PFAgoraSlabProRegular';
+	src: url('../fonts/pfagoraslabpro-medium-webfont.eot');
+	src: url('../fonts/pfagoraslabpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/pfagoraslabpro-medium-webfont.woff') format('woff'),
+		 url('../fonts/pfagoraslabpro-medium-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal; 
+}
+h1 {
+	font-size: 40px;
+	font-weight: normal;
+}
+h2 {
+	font-size: 15px;
+	font-weight: normal;
+}
+.graySelector {
+	color: #939393;
+}
+.mainTitle {
+	padding: 15px 20px 0 20px;
+}
+.subTitle {
+	margin: -5px 0 0 0;
+	padding: 0 20px;
+}
+.chapter {
+	padding-bottom: 13px;
+}
+.textContentBlock p {
+	font-family: 'PFAgoraSlabProRegularLigher';
+	font-size: 13px;
+	font-weight: lighter;
+	padding: 0 20px 6px 20px;
+}
+
+

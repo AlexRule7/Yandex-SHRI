@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="Author" content="Alexander Makaev" />
+	<title>Yandex SHRI | Alexander Makaev</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$(".personalLink").click(function(event) {
+				event.preventDefault();
+				if ($(this).hasClass("selected")) {
+				} else {
+					$(".textContentBlock").slideUp("fast");
+					$(".personalText").slideDown("fast");
+				}
+			});
+
+			$(".experiencelLink").click(function(event) {
+				event.preventDefault();
+				if ($(this).hasClass("selected")) {
+				} else {
+					$(".textContentBlock").slideUp("fast");
+					$(".experienceText").slideDown("fast");
+				}
+			});
+
+			$(".aboutLink").click(function(event) {
+				event.preventDefault();
+				if ($(this).hasClass("selected")) {
+				} else {
+					$(".textContentBlock").slideUp("fast");
+					$(".aboutText").slideDown("fast");
+				}
+			});
+
+			$(".navigation a").click(function(event) {
+				event.preventDefault();
+				$(".navigation a").removeClass("selected");
+				$(this).addClass("selected");
+			});
+
+			$(".skypeTrigger").click(function(event) {
+				event.preventDefault();
+				$(this).parent().fadeOut("fast", function() {
+					$(".skypeAccount").fadeIn("fast");
+				});
+			});
+
+			$(".skypeHide").click(function(event) {
+				event.preventDefault();
+				$(this).parent().fadeOut("fast", function() {
+					$(".skypeTrigger").parent().fadeIn("fast");
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="contentHolder">
+		<div class="paperSheet topLayer">
+
+			<div class="header">
+				<div class="leftFloatBlock photoHolder">
+					<img src="img/photo.png" alt="Alexander Makaev" class="photo" />
+				</div><!-- photoHolder -->
+				<div class="rightFloatBlock">
+					<h1 class="mainTitle">Макаев Александр</h1>
+					<h2 class="subTitle graySelector">Дизайн | HTML | CSS | jQuery | Git | Jira</h2>
+				</div>
+			</div><!-- header -->
+
+			<div class="content">
+				<div class="leftFloatBlock">
+					<ul class="navigation">
+						<li><a class="actionLink personalLink selected" href="#">Личные данные</a></li>
+						<li><a class="actionLink experiencelLink" href="#">Опыт разработки</a></li>
+						<li><a class="actionLink aboutLink" href="#">Я и ШРИ</a></li>
+					</ul>
+				</div><!-- navigationBlock -->
+
+				<div class="rightFloatBlock textContentBlock personalText">
+					<div class="chapter">
+						<p>ФИО: Макаев Александр Сергеевич.</p>
+						<p>Родился 8 сентября 1991 году.</p>
+						<p>Живу в Москве.</p>
+					</div>
+					<div class="chapter">
+						<p>Учился в ГУУ на факультете Налогов и налогового менеджмента.</p>
+						<p>Закончил обучение в этом году.</p>
+						<p>Уровень английского: intermediate.</p>
+					</div>
+						<p>Email: <a class="actionLink" href="mailto:alexrule7@gmail.com">alexrule7@gmail.com</a></p>
+						<p>Телефон: +7 (916) 631-20-00</p>
+						<p><a class="actionLink skypeTrigger" href="#">Показать Skype</a></p>
+						<p class="skypeAccount">Skype: alexrule7 (<a class="actionLink skypeHide" href="#">спрятать</a>)</p>
+				</div><!-- textContentBlock -->
+
+
+				<div class="rightFloatBlock textContentBlock experienceText hide">
+					<div class="chapter">
+						<p>За 3 года нарисовал и сверстал много маленьких магазинчиков, промо материалов, приложений, личных страниц и серьезных веб-интерфейсов. </p>
+						<p>Начинал с разработки отдельных элементов интерфейса, например: корзина покупки купонов на сайте компани KupiKupon. Сейчас участвую в создании веб-приложения для мониторинга аналитики социальных игр PixAPI.</p>
+						<p>Уже год отвечаю за дизайн и верстку в компании Pixonic.</p>
+					</div>
+					<div class="chapter">
+						<p>Знаю: CSS, HTML, jQuery.</p>
+						<p>Пишу в: <span class="graySelector">Dreamweaver</span>, <span class="graySelector">Coda</span>, Sublime Text, IntelliJ IDEA.</p>
+						<p>Работаю под:  <span class="graySelector">Windows</span>, Mac OS X.</p>
+						<p>Уже почти год ежедневно использую GitHub и  Jira.</p>
+					</div>
+						<p>По-моему, интересно: <a href="http://ui-cloud.com">ui-cloud.com</a>, <a href="http://css-tricks.com">css-tricks.com</a>, <a href="http://designspiration.net">designspiration.net</a>.</p>
+				</div><!-- textContentBlock -->
+
+				<div class="rightFloatBlock textContentBlock aboutText hide">
+					<div class="chapter">
+						<p>Для меня Школы разработки интерфейсов — отличная возможность углубить свои знания в облоасти js и посмотреть, как происходит разработка таких болших и сложных проектов, как Яндекс.Почта и Карты. </p>
+					</div>
+					<div class="chapter">
+						<p>О том, что Яндекс открыл ШРИ, я узнал от своего одноклассника, который работает в компании.</p>
+					</div>
+						<p>Могу выделять по 2 часа в будни и по 5 в выходные. Примерно 10 часов в неделю.</p>
+				</div><!-- textContentBlock -->
+
+			</div><!-- content -->
+
+		</div><!-- topLayer -->
+		<div class="paperSheet middleLayer"></div>
+		<div class="paperSheet bottomLayer"></div>
+	</div><!-- contentHolder -->
+</body>
+</html>
